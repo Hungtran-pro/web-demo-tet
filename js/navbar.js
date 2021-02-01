@@ -1,5 +1,5 @@
-const template = document.createElement('template');
-template.innerHTML = `
+const template = document.createElement("template");
+template.innerHTML = /*html*/ `
     
 <link rel="stylesheet" href="./css/navbar.css">
 <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
@@ -52,12 +52,12 @@ template.innerHTML = `
             </div>
         </div>
     </div>
-`
+`;
 class NavBars extends HTMLElement {
-    constructor() {
-        super();
-        this.attachShadow({ mode: 'open' });
-        this.shadowRoot.appendChild(template.content.cloneNode(true));  
-    }
+  constructor() {
+    super();
+    this.attachShadow({ mode: "open" });
+    this.shadowRoot.appendChild(template.content.cloneNode(true));
+  }
 }
-window.customElements.define('nav-bars', NavBars);
+window.customElements.define("nav-bars", NavBars);
